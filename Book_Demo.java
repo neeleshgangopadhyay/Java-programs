@@ -16,20 +16,20 @@ class  Book
     author=b;
     price=p;
     num_pages=n;
-  }
-  public void getdetails()
+  } 
+  public void getdetails()//input details functions
   {
      System.out.println("enter the name of the book");
-     name=s.next();
+     name=s.nextLine();
      System.out.println("enter the author name of the book");
-     author=s.next();
+     author=s.nextLine();
      System.out.println("enter the price of the book");
      price=s.nextDouble();
      System.out.println("enter the number of pages of the book");
      num_pages=s.nextInt();
     
   }
-  public void toString1()
+  public void toString1()  //functions to output details
   {  System.out.println(" the name of the book:"+name);
      
      System.out.println(" the author name of the book:"+author);
@@ -47,20 +47,16 @@ class Book_Demo
      int num=sc.nextInt(); 
      Book b[]=new Book[num]; 
      for(int i=0;i<num;i++)
-     {   b[i]=new Book(); 
-         b[i].getdetails();}
+     {   b[i]=new Book();  //default constructors 
+         b[i].getdetails();
+     }
      for(int j=0;j<num;j++)
       {  b[j].toString1();}                     
      
-     System.out.println("seeing the use of parameterised constructors"); //
-    Book b2=new Book("the diary of anne frank","Anne Frank",300.25,300);
+     System.out.println("seeing the use of parameterised constructors"); // parameterised constructors
+     Book b2=new Book("the diary of anne frank","Anne Frank",300.25,300);
      b2.toString1();
-     Book bi[]=new Book[num];
   
-     
-     
-    
-     
-    }
+   }
 }
 
