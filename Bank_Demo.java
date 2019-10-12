@@ -7,16 +7,16 @@ class Bank
   public  double samount;
   
   public void entsav()
- { System.out.println("enter the ampont you want to store in saving ammount:");
+ { System.out.println("enter the amount you want to store in saving ammount:");
    double am=s.nextDouble();
    samount=samount+am;
-   System.out.println(" the ampont present in saving account is: "+samount);
+   System.out.println(" the amount present in saving account is: "+samount);
   }
 public void entcur()
- { System.out.println("enter the ampont you want to store in current ammount:");
+ { System.out.println("enter the amount you want to store in current ammount:");
    double am=s.nextDouble();
    camount=camount+am;
-   System.out.println(" the ampont present in current account is: "+camount);
+   System.out.println(" the amount present in current account is: "+camount);
   }
   
 }
@@ -29,19 +29,20 @@ class Current extends Bank
 
      sch=(5*camount)/100;
      camount=camount-sch;
-     System.out.println(" the ampont present in current account is: "+camount);
+     System.out.println(" the amount present in current account is: "+camount);
    }
  }
   public void displayc()
-   { System.out.println("the amount present is: "+camount);
+   {   minbal();
+      System.out.println("the amount present is: "+camount);
    } 
   
   public void chqbook()
    { double f; 
      System.out.println("enter the amount you want to pay in cheque: ");
      f=sa.nextDouble();
-     camount=camount-f;
-     System.out.println("your cheque has been approved of Rupees: "+camount); 
+     System.out.println("your cheque has been approved of Rupees: "+camount);
+camount=camount-f; 
      minbal();
    }
 
@@ -50,7 +51,7 @@ class Current extends Bank
 {  Scanner sc=new Scanner(System.in);
    public void withdrawal()
   { 
-    System.out.println("enter the ampont you want to wiyhdraw: ");
+    System.out.println("enter the amount you want to wiyhdraw: ");
     double am=sc.nextDouble();
     samount=samount-am;
     System.out.println("the saving account amount of Rupees is: "+samount);
@@ -96,7 +97,7 @@ class Current extends Bank
      Current c=new Current();
      Savings s=new Savings();
      s.entsav();
-     c.entsav();      
+     c.entcur();      
 
 
      
