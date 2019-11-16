@@ -1,5 +1,5 @@
-import CIE.*;
-import SEE.*;
+import CIE.Internals;
+import SEE.SEE;
 
 
 public class Dpackage
@@ -8,7 +8,7 @@ public class Dpackage
 	{
 	   int marks[]=new int[5];
 	   SEE s1=new SEE();
-	   CIE c1=new CIE();
+	   Internals c1=new Internals();
 	   System.out.println("ENTER THE pERSONAL DETAILS AND  SEE MArKS OUT OF 50 OF ALL SUBJECT:");
 	   s1.getdata();
 	   System.out.println("ENTER THE CIE MARKS OUT OF 50 OF ALL SUBJECT:");
@@ -19,7 +19,7 @@ public class Dpackage
 		   marks[i]= s1.SEEmarks[i]+c1.marks[i];
 
 	    }
-	    System.out.println("THE DETAILS OF STUDENT AND MARKS IN EACH SUBJECT OUT OF 100 ARE:");
+	    System.out.println("THE DETAILS OF STUDENT AND MARKS IN EACH SUBJECT OUT OF 100 ARE:   ");
 	    s1.showdata();
 	    c1.showdata();
 	    for(int i=0;i<5;i++)
